@@ -1,5 +1,5 @@
 # FirebaseWebGL
-A Unity package that makes use of the Firebase Javascript SDK to make use of the basic Realtime Database functions on WebGL builds
+A Unity package that makes use of the Firebase Javascript SDK to implement the basic Realtime Database functions on WebGL builds
 
 ## Installation
 - Copy the FirebaseWebGL folder into your Unity project assets folder.
