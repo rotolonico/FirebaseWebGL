@@ -14,4 +14,4 @@ A Unity package that makes use of the Firebase Javascript SDK to make use of the
 ## Additional info
 - As of right now, only the basic functions of the Realtime Database Firebase service have been worked on, but you can expect more services coming soon to provide for a fuller Firebase WebGL experience.
 
-![Available methods](https://i.ibb.co/hmyKCBC/code.png)
+![Available methods](https://i.imgur.com/O5VdXhn.png)
