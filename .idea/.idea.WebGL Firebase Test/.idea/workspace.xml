@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98eb49ed-6cce-4157-883d-8e40074c0d2d" name="Default Changelist" comment="" />
+    <list default="true" id="98eb49ed-6cce-4157-883d-8e40074c0d2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebGL Firebase Test/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebGL Firebase Test/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebGL Firebase Test/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebGL Firebase Test/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Example.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Example/ExampleHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Example/ExampleHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Example/ExampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Example/ExampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Firebase WebGL/Scripts/FirebaseBridge.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RestClient/Packages/Proyecto26.RestClient/Helpers/RequestHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Utils/ExampleScenesHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge/FirebaseDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/Objects/FirebaseUserMetadata.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/Objects/FirebaseError.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Utils/StringSerializationAPI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge/FirebaseAuth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Auth/AuthExampleHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Database/DatabaseExampleHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B9ABB743-AA73-4E3E-8715-2AE31FBC1DFF/b3/723b909c/Single.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Firebase WebGL/Example/ExampleHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/Objects/FirebaseUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Functions/FunctionsExampleHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/Objects/FirebaseUserProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge/FirebaseFunctions.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -21,10 +47,14 @@
         <option value="$PROJECT_DIR$/Assets/Firebase WebGL/Example/Example.cs" />
         <option value="$PROJECT_DIR$/Assets/Firebase WebGL/Example/ExampleHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Firebase WebGL/Scripts/FirebaseBridge.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirebaseWebGL/Examples/Functions/FunctionsExampleHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge/FirebaseFunctions.cs" />
+        <option value="$PROJECT_DIR$/Assets/FirebaseWebGL/Scripts/FirebaseBridge/FirebaseAuth.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ga2neAJf7YicC9KBMQCJCVvKbX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
