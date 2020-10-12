@@ -3,7 +3,8 @@ A Unity package that makes use of the Firebase Javascript SDK to implement the b
 
 ## Installation
 - Copy the FirebaseWebGL folder into your Unity project assets folder.
-- Alternatively,  you can import the latest .unitypackage from the repository releases
+- Consider also adding the RestClient, Fullserializer and Textmeshpro folders to get the project fully up and running.
+- Alternatively,  you can import the latest .unitypackage from the repository releases.
 
 ## Usage
   1) Call any of the basics Firebase Javascript SDK functions from the FirebaseBridge.cs class
