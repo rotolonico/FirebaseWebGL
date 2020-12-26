@@ -10,5 +10,7 @@ namespace FirebaseWebGL.Examples.Utils
         public void GoToAuthScene() => SceneManager.LoadScene("AuthExampleScene");
         
         public void GoToFunctionsScene() => SceneManager.LoadScene("FunctionsExampleScene");
+        
+        public void GoToStorageScene() => SceneManager.LoadScene("StorageExampleScene");
     }
 }

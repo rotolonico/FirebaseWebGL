@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FirebaseWebGL/Examples/Functions/FunctionsExampleScene.unity
     guid: 86be46252a1d31a9db658fc85d4cbbd3
+  - enabled: 1
+    path: Assets/FirebaseWebGL/Examples/Storage/StorageExampleScene.unity
+    guid: 9922f0222131128308625e191fc94f23
   m_configObjects: {}
