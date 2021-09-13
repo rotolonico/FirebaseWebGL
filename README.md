@@ -16,12 +16,9 @@ A Unity package that makes use of the Firebase Javascript SDK to implement the b
  - Realtime Database
  - Authentication
  - Cloud Functions
+ - Storage
+ - Firestore
   
 ## Additional info
 - You can find a working implementaiton of this package [here](https://rotolonico.github.io/FirebaseWebGLImplementation/)
 - For Storage, you'll also need to set up cors for your bucket. More info [here](https://firebase.google.com/docs/storage/web/download-files#cors_configuration) or in the README.txt file in the Storage example in the project.
-
-![Realtime Database Methods](https://i.imgur.com/O5VdXhn.png)
-![Authentication Methods](https://imgur.com/tsGXXJQ.png)
-![Cloud Functions Methods](https://imgur.com/pRBI4tj.png)
-![Storage MEthods](https://imgur.com/a/lUJxHaQ)

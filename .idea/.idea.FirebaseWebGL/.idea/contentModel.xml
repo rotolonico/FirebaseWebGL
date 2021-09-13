@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_FirebaseWebGL.-588894968.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -15,6 +13,9 @@
             </e>
             <e p="Database" t="Include">
               <e p="DatabaseExampleHandler.cs" t="Include" />
+            </e>
+            <e p="Firestore" t="Include">
+              <e p="FirestoreExampleHandler.cs" t="Include" />
             </e>
             <e p="Functions" t="Include">
               <e p="FunctionsExampleHandler.cs" t="Include" />
@@ -32,6 +33,7 @@
             <e p="FirebaseBridge" t="Include">
               <e p="FirebaseAuth.cs" t="Include" />
               <e p="FirebaseDatabase.cs" t="Include" />
+              <e p="FirebaseFirestore.cs" t="Include" />
               <e p="FirebaseFunctions.cs" t="Include" />
               <e p="FirebaseStorage.cs" t="Include" />
             </e>
@@ -55,18 +57,6 @@
               <e p="fsIAotConverter.cs" t="Include" />
             </e>
             <e p="Converters" t="Include">
-              <e p="Unity" t="Include">
-                <e p="AnimationCurve_DirectConverter.cs" t="Include" />
-                <e p="Bounds_DirectConverter.cs" t="Include" />
-                <e p="GUIStyleState_DirectConverter.cs" t="Include" />
-                <e p="GUIStyle_DirectConverter.cs" t="Include" />
-                <e p="Gradient_DirectConverter.cs" t="Include" />
-                <e p="Keyframe_DirectConverter.cs" t="Include" />
-                <e p="LayerMask_DirectConverter.cs" t="Include" />
-                <e p="RectOffset_DirectConverter.cs" t="Include" />
-                <e p="Rect_DirectConverter.cs" t="Include" />
-                <e p="UnityEvent_Converter.cs" t="Include" />
-              </e>
               <e p="fsArrayConverter.cs" t="Include" />
               <e p="fsDateConverter.cs" t="Include" />
               <e p="fsDictionaryConverter.cs" t="Include" />
@@ -80,20 +70,18 @@
               <e p="fsReflectedConverter.cs" t="Include" />
               <e p="fsTypeConverter.cs" t="Include" />
               <e p="fsWeakReferenceConverter.cs" t="Include" />
-            </e>
-            <e p="Internal" t="Include">
-              <e p="fsCyclicReferenceManager.cs" t="Include" />
-              <e p="fsOption.cs" t="Include" />
-              <e p="fsPortableReflection.cs" t="Include" />
-              <e p="fsTypeExtensions.cs" t="Include" />
-              <e p="fsVersionManager.cs" t="Include" />
-              <e p="fsVersionedType.cs" t="Include" />
-            </e>
-            <e p="Reflection" t="Include">
-              <e p="fsMetaProperty.cs" t="Include" />
-              <e p="fsMetaType.cs" t="Include" />
-              <e p="fsReflectionUtility.cs" t="Include" />
-              <e p="fsTypeCache.cs" t="Include" />
+              <e p="Unity" t="Include">
+                <e p="AnimationCurve_DirectConverter.cs" t="Include" />
+                <e p="Bounds_DirectConverter.cs" t="Include" />
+                <e p="Gradient_DirectConverter.cs" t="Include" />
+                <e p="GUIStyle_DirectConverter.cs" t="Include" />
+                <e p="GUIStyleState_DirectConverter.cs" t="Include" />
+                <e p="Keyframe_DirectConverter.cs" t="Include" />
+                <e p="LayerMask_DirectConverter.cs" t="Include" />
+                <e p="Rect_DirectConverter.cs" t="Include" />
+                <e p="RectOffset_DirectConverter.cs" t="Include" />
+                <e p="UnityEvent_Converter.cs" t="Include" />
+              </e>
             </e>
             <e p="fsBaseConverter.cs" t="Include" />
             <e p="fsConfig.cs" t="Include" />
@@ -103,8 +91,8 @@
             <e p="fsData.cs" t="Include" />
             <e p="fsDirectConverter.cs" t="Include" />
             <e p="fsExceptions.cs" t="Include" />
-            <e p="fsISerializationCallbacks.cs" t="Include" />
             <e p="fsIgnoreAttribute.cs" t="Include" />
+            <e p="fsISerializationCallbacks.cs" t="Include" />
             <e p="fsJsonParser.cs" t="Include" />
             <e p="fsJsonPrinter.cs" t="Include" />
             <e p="fsMemberSerialization.cs" t="Include" />
@@ -113,6 +101,20 @@
             <e p="fsPropertyAttribute.cs" t="Include" />
             <e p="fsResult.cs" t="Include" />
             <e p="fsSerializer.cs" t="Include" />
+            <e p="Internal" t="Include">
+              <e p="fsCyclicReferenceManager.cs" t="Include" />
+              <e p="fsOption.cs" t="Include" />
+              <e p="fsPortableReflection.cs" t="Include" />
+              <e p="fsTypeExtensions.cs" t="Include" />
+              <e p="fsVersionedType.cs" t="Include" />
+              <e p="fsVersionManager.cs" t="Include" />
+            </e>
+            <e p="Reflection" t="Include">
+              <e p="fsMetaProperty.cs" t="Include" />
+              <e p="fsMetaType.cs" t="Include" />
+              <e p="fsReflectionUtility.cs" t="Include" />
+              <e p="fsTypeCache.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="RestClient" t="Include">
@@ -150,9 +152,9 @@
                 <e p="PromiseStateException.cs" t="Include" />
               </e>
               <e p="Promise.cs" t="Include" />
+              <e p="Promise_NonGeneric.cs" t="Include" />
               <e p="PromiseHelpers.cs" t="Include" />
               <e p="PromiseTimer.cs" t="Include" />
-              <e p="Promise_NonGeneric.cs" t="Include" />
               <e p="Tuple.cs" t="Include" />
             </e>
           </e>
@@ -187,9 +189,11 @@
         </e>
       </e>
       <e p="FirebaseWebGL.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_FirebaseWebGL.1687292766.00" t="ExcludeRecursive" />
   </component>
 </project>

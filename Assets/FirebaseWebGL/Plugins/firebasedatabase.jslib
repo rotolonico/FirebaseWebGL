@@ -26,7 +26,7 @@ mergeInto(LibraryManager.library, {
 
         try {
 
-            firebase.database().ref(parsedPath).set(parsedValue).then(function(unused) {
+            firebase.database().ref(parsedPath).set(JSON.parse(parsedValue)).then(function(unused) {
                 unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: " + parsedValue + " was posted to " + parsedPath);
             });
 
@@ -44,7 +44,7 @@ mergeInto(LibraryManager.library, {
 
         try {
 
-            firebase.database().ref(parsedPath).push().set(parsedValue).then(function(unused) {
+            firebase.database().ref(parsedPath).push().set(JSON.parse(parsedValue)).then(function(unused) {
                 unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: " + parsedValue + " was pushed to " + parsedPath);
             });
 
@@ -62,7 +62,7 @@ mergeInto(LibraryManager.library, {
 
         try {
 
-            firebase.database().ref(parsedPath).update(parsedValue).then(function(unused) {
+            firebase.database().ref(parsedPath).update(JSON.parse(parsedValue)).then(function(unused) {
                 unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: " + parsedValue + " was updated in " + parsedPath);
             });
 
