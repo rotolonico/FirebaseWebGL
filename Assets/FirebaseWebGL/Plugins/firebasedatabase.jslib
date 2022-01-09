@@ -1,10 +1,10 @@
 mergeInto(LibraryManager.library, {
 
     GetJSON: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -18,11 +18,11 @@ mergeInto(LibraryManager.library, {
     },
 
     PostJSON: function(path, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -36,11 +36,11 @@ mergeInto(LibraryManager.library, {
     },
 
     PushJSON: function(path, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -54,11 +54,11 @@ mergeInto(LibraryManager.library, {
     },
 
     UpdateJSON: function(path, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -72,10 +72,10 @@ mergeInto(LibraryManager.library, {
     },
 
     DeleteJSON: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -89,10 +89,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForValueChanged: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -106,10 +106,10 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForValueChanged: function(path, parsedObjectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.database().ref(parsedPath).off('value');
@@ -120,10 +120,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForChildAdded: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -137,10 +137,10 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForChildAdded: function(path, parsedObjectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.database().ref(parsedPath).off('child_added');
@@ -151,10 +151,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForChildChanged: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -168,10 +168,10 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForChildChanged: function(path, parsedObjectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.database().ref(parsedPath).off('child_changed');
@@ -182,10 +182,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForChildRemoved: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -199,10 +199,10 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForChildRemoved: function(path, parsedObjectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.database().ref(parsedPath).off('child_removed');
@@ -213,10 +213,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ModifyNumberWithTransaction: function(path, amount, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -236,10 +236,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ToggleBooleanWithTransaction: function(path, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 

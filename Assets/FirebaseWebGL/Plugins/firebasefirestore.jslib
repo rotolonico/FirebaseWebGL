@@ -1,11 +1,11 @@
 mergeInto(LibraryManager.library, {
 
     GetDocument: function (collectionPath, documentId, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.firestore().collection(parsedPath).doc(parsedId).get().then(function (doc) {
@@ -25,10 +25,10 @@ mergeInto(LibraryManager.library, {
     },
 
     GetDocumentsInCollection: function (collectionPath, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             firebase.firestore().collection(parsedPath).get().then(function (querySnapshot) {
@@ -49,12 +49,12 @@ mergeInto(LibraryManager.library, {
     },
 
     SetDocument: function (collectionPath, documentId, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -71,11 +71,11 @@ mergeInto(LibraryManager.library, {
     },
 
     AddDocument: function (collectionPath, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -92,12 +92,12 @@ mergeInto(LibraryManager.library, {
     },
 
     UpdateDocument: function (collectionPath, documentId, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -114,11 +114,11 @@ mergeInto(LibraryManager.library, {
     },
 
     DeleteDocument: function (collectionPath, documentId, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -135,12 +135,12 @@ mergeInto(LibraryManager.library, {
     },
 
     DeleteField: function (collectionPath, documentId, field, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedField = Pointer_stringify(field);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedField = UTF8ToString(field);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -160,13 +160,13 @@ mergeInto(LibraryManager.library, {
     },
 
     AddElementInArrayField: function (collectionPath, documentId, field, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedField = Pointer_stringify(field);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedField = UTF8ToString(field);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -186,13 +186,13 @@ mergeInto(LibraryManager.library, {
     },
 
     RemoveElementInArrayField: function (collectionPath, documentId, field, value, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedField = Pointer_stringify(field);
-        var parsedValue = Pointer_stringify(value);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedField = UTF8ToString(field);
+        var parsedValue = UTF8ToString(value);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -212,12 +212,12 @@ mergeInto(LibraryManager.library, {
     },
 
     IncrementFieldValue: function (collectionPath, documentId, field, increment, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedField = Pointer_stringify(field);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedField = UTF8ToString(field);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -237,11 +237,11 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForDocumentChange: function (collectionPath, documentId, includeMetadataChanges, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -262,11 +262,11 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForDocumentChange: function (collectionPath, documentId, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedId = Pointer_stringify(documentId);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedId = UTF8ToString(documentId);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -280,10 +280,10 @@ mergeInto(LibraryManager.library, {
     },
 
     ListenForCollectionChange: function (collectionPath, includeMetadataChanges, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -311,10 +311,10 @@ mergeInto(LibraryManager.library, {
     },
 
     StopListeningForCollectionChange: function (collectionPath, objectName, callback, fallback) {
-        var parsedPath = Pointer_stringify(collectionPath);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(collectionPath);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 

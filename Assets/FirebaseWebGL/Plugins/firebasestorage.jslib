@@ -2,11 +2,11 @@ mergeInto(LibraryManager.library, {
 
     UploadFile: function(path, data, objectName, callback, fallback) {
 
-        var parsedPath = Pointer_stringify(path);
-        var parsedData = Pointer_stringify(data);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedData = UTF8ToString(data);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -31,10 +31,10 @@ mergeInto(LibraryManager.library, {
 
     DownloadFile: function(path, objectName, callback, fallback) {
 
-        var parsedPath = Pointer_stringify(path);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedPath = UTF8ToString(path);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 

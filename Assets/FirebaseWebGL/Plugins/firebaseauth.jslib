@@ -1,11 +1,11 @@
 mergeInto(LibraryManager.library, {
 
     CreateUserWithEmailAndPassword: function (email, password, objectName, callback, fallback) {
-        var parsedEmail = Pointer_stringify(email);
-        var parsedPassword = Pointer_stringify(password);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedEmail = UTF8ToString(email);
+        var parsedPassword = UTF8ToString(password);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -21,11 +21,11 @@ mergeInto(LibraryManager.library, {
     },
 
     SignInWithEmailAndPassword: function (email, password, objectName, callback, fallback) {
-        var parsedEmail = Pointer_stringify(email);
-        var parsedPassword = Pointer_stringify(password);
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedEmail = UTF8ToString(email);
+        var parsedPassword = UTF8ToString(password);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
 
@@ -41,9 +41,9 @@ mergeInto(LibraryManager.library, {
     },
 
     SignInWithGoogle: function (objectName, callback, fallback) {
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             var provider = new firebase.auth.GoogleAuthProvider();
@@ -59,9 +59,9 @@ mergeInto(LibraryManager.library, {
     },
 
     SignInWithFacebook: function (objectName, callback, fallback) {
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedCallback = Pointer_stringify(callback);
-        var parsedFallback = Pointer_stringify(fallback);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
 
         try {
             var provider = new firebase.auth.FacebookAuthProvider();
@@ -77,9 +77,9 @@ mergeInto(LibraryManager.library, {
     },
 
     OnAuthStateChanged: function (objectName, onUserSignedIn, onUserSignedOut) {
-        var parsedObjectName = Pointer_stringify(objectName);
-        var parsedOnUserSignedIn = Pointer_stringify(onUserSignedIn);
-        var parsedOnUserSignedOut = Pointer_stringify(onUserSignedOut);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedOnUserSignedIn = UTF8ToString(onUserSignedIn);
+        var parsedOnUserSignedOut = UTF8ToString(onUserSignedOut);
 
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
