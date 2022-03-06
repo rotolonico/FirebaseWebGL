@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FirebaseWebGL/Examples/Firestore/FirestoreExampleScene.unity
     guid: 32ff1ce177ae746d9bca1562a25f43d2
+  - enabled: 1
+    path: Assets/FirebaseWebGL/Examples/Analytics/AnalyticsExampleScene.unity
+    guid: d76821ae202681642b752011148ceb84
   m_configObjects: {}
