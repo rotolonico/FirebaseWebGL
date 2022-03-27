@@ -105,7 +105,7 @@ mergeInto(LibraryManager.library, {
         }
     },
 
-    StopListeningForValueChanged: function(path, parsedObjectName, callback, fallback) {
+    StopListeningForValueChanged: function(path, objectName, callback, fallback) {
         var parsedPath = UTF8ToString(path);
         var parsedObjectName = UTF8ToString(objectName);
         var parsedCallback = UTF8ToString(callback);
@@ -136,7 +136,7 @@ mergeInto(LibraryManager.library, {
         }
     },
 
-    StopListeningForChildAdded: function(path, parsedObjectName, callback, fallback) {
+    StopListeningForChildAdded: function(path, objectName, callback, fallback) {
         var parsedPath = UTF8ToString(path);
         var parsedObjectName = UTF8ToString(objectName);
         var parsedCallback = UTF8ToString(callback);
@@ -167,7 +167,7 @@ mergeInto(LibraryManager.library, {
         }
     },
 
-    StopListeningForChildChanged: function(path, parsedObjectName, callback, fallback) {
+    StopListeningForChildChanged: function(path, objectName, callback, fallback) {
         var parsedPath = UTF8ToString(path);
         var parsedObjectName = UTF8ToString(objectName);
         var parsedCallback = UTF8ToString(callback);
@@ -198,7 +198,7 @@ mergeInto(LibraryManager.library, {
         }
     },
 
-    StopListeningForChildRemoved: function(path, parsedObjectName, callback, fallback) {
+    StopListeningForChildRemoved: function(path, objectName, callback, fallback) {
         var parsedPath = UTF8ToString(path);
         var parsedObjectName = UTF8ToString(objectName);
         var parsedCallback = UTF8ToString(callback);
