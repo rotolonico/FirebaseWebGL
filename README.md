@@ -23,3 +23,35 @@ A Unity package that makes use of the Firebase Javascript SDK to implement the b
 ## Additional info
 - You can find a working implementaiton of this package [here](https://rotolonico.github.io/FirebaseWebGLImplementation/)
 - For Storage, you'll also need to set up cors for your bucket. More info [here](https://firebase.google.com/docs/storage/web/download-files#cors_configuration) or in the README.txt file in the Storage example in the project.
+
+## Example Configuration HTML (Unity Build)
+(08/2022) Tested Auth and Realtime Database
+
+Import these scripts before the others scripts and ```</body>``` tag.
+
+Delete "==== YOUR FIREBASE CONFIGURATION ===".
+
+
+```
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-database-compat.js"></script>
+<script>
+  const firebaseApp = firebase.initializeApp({
+  ==== YOUR FIREBASE CONFIGURATION ===
+    apiKey: "...",
+    authDomain: "...",
+    databaseURL: "...,
+    projectId: "...",
+    storageBucket: "...",
+    messagingSenderId: "...",
+    appId: "...",
+    measurementId: "..."
+   ==== YOUR FIREBASE CONFIGURATION ===
+    });
+    const auth = firebaseApp.auth();
+    const database = firebaseApp.database(); 
+</script>
+```
+
+Run and Fun.
