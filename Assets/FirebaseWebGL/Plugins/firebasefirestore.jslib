@@ -11,16 +11,16 @@ mergeInto(LibraryManager.library, {
             firebase.firestore().collection(parsedPath).doc(parsedId).get().then(function (doc) {
 
                 if (doc.exists) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(doc.data()));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(doc.data()));
                 } else {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "null");
+                    window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "null");
                 }
             }).catch(function(error) {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
             });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -38,13 +38,13 @@ mergeInto(LibraryManager.library, {
                     docs[doc.id] = doc.data();
                 });
 
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(docs));
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(docs));
             }).catch(function(error) {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
             });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -59,14 +59,14 @@ mergeInto(LibraryManager.library, {
         try {
 
             firebase.firestore().collection(parsedPath).doc(parsedId).set(JSON.parse(parsedValue)).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was set");
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was set");
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -80,14 +80,14 @@ mergeInto(LibraryManager.library, {
         try {
 
             firebase.firestore().collection(parsedPath).add(JSON.parse(parsedValue)).then(function(unused) {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: document added in collection " + parsedPath);
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: document added in collection " + parsedPath);
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -102,14 +102,14 @@ mergeInto(LibraryManager.library, {
         try {
 
             firebase.firestore().collection(parsedPath).doc(parsedId).update(JSON.parse(parsedValue)).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was updated");
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was updated");
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -123,14 +123,14 @@ mergeInto(LibraryManager.library, {
         try {
 
             firebase.firestore().collection(parsedPath).doc(parsedId).delete().then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was deleted");
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: document " + parsedId + " was deleted");
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -148,14 +148,14 @@ mergeInto(LibraryManager.library, {
             value[parsedField] = firebase.firestore.FieldValue.delete();
 
             firebase.firestore().collection(parsedPath).doc(parsedId).update(value).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: field " + parsedField + " was deleted");
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: field " + parsedField + " was deleted");
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -174,14 +174,14 @@ mergeInto(LibraryManager.library, {
             value[parsedField] = firebase.firestore.FieldValue.arrayUnion(JSON.parse(parsedValue));
 
             firebase.firestore().collection(parsedPath).doc(parsedId).update(value).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: element " + parsedValue + " was added in " + parsedField);
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: element " + parsedValue + " was added in " + parsedField);
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -200,14 +200,14 @@ mergeInto(LibraryManager.library, {
             value[parsedField] = firebase.firestore.FieldValue.arrayRemove(JSON.parse(parsedValue));
 
             firebase.firestore().collection(parsedPath).doc(parsedId).update(value).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: element " + parsedValue + " was removed in " + parsedField);
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: element " + parsedValue + " was removed in " + parsedField);
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -225,14 +225,14 @@ mergeInto(LibraryManager.library, {
             value[parsedField] = firebase.firestore.FieldValue.increment(increment);
 
             firebase.firestore().collection(parsedPath).doc(parsedId).update(value).then(function() {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: incremented " + parsedField + " by " + increment);
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: incremented " + parsedField + " by " + increment);
             })
                 .catch(function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -251,13 +251,13 @@ mergeInto(LibraryManager.library, {
                 .onSnapshot({
                     includeMetadataChanges: (includeMetadataChanges == 1)
                 }, function(doc) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(doc.data()));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(doc.data()));
                 }, function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -273,9 +273,9 @@ mergeInto(LibraryManager.library, {
             if (typeof firestorelisteners === 'undefined') firestorelisteners = {};
 
             this.firestorelisteners[parsedPath + "/" + parsedId]();
-            unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: listener was removed");
+            window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: listener was removed");
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -299,14 +299,14 @@ mergeInto(LibraryManager.library, {
                         docs[doc.id] = doc.data();
                     });
 
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(docs));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(docs));
 
                 }, function(error) {
-                    unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
                 });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -321,9 +321,9 @@ mergeInto(LibraryManager.library, {
             if (typeof firestorelisteners === 'undefined') firestorelisteners = {};
 
             this.firestorelisteners[parsedPath + "/collection/"]();
-            unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: listener was removed");
+            window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: listener was removed");
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     }
 
