@@ -11,11 +11,11 @@ mergeInto(LibraryManager.library, {
         try {
 
             firebase.storage().ref(parsedPath).put(base64ToArrayBuffer(parsedData)).then(function(snapshot) {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, "Success: data was posted to " + parsedPath);
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: data was posted to " + parsedPath);
             });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
 
         function base64ToArrayBuffer(base64) {
@@ -44,17 +44,17 @@ mergeInto(LibraryManager.library, {
                 xhr.responseType = 'arraybuffer';
                 xhr.onload = function(event) {
                   var data = xhr.response;
-                  unityInstance.Module.SendMessage(parsedObjectName, parsedCallback, arrayBufferToBase64(data));
+                  window.unityInstance.SendMessage(parsedObjectName, parsedCallback, arrayBufferToBase64(data));
                 };
                 xhr.open('GET', url);
                 xhr.send();
               
               }).catch(function(error) {
-                unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
               });
 
         } catch (error) {
-            unityInstance.Module.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
 
         function arrayBufferToBase64( buffer ) {
