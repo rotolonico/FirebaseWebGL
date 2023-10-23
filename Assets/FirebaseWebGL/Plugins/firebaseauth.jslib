@@ -90,6 +90,59 @@ mergeInto(LibraryManager.library, {
 
         } catch (error) {
             window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+    },
+
+    SendEmailVerification: function(objectName, callback, fallback){
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
+
+        try {
+            if(!firebase.auth().currentUser.emailVerified){
+                firebase.auth().currentUser.sendEmailVerification().then(function (unused) {
+                    window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: SendEmailVerification");
+                }).catch(function (error) {
+                    window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+                });
+            }
+        } catch (error) {
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        }
+    },
+
+    SendPasswordResetEmail: function (email, objectName, callback, fallback) {
+        var parsedEmail = UTF8ToString(email);
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
+
+        try {
+
+            firebase.auth().sendPasswordResetEmail(parsedEmail).then(function (unused) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: SendPasswordResetEmail for " + parsedEmail);
+            }).catch(function (error) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            });
+
+        } catch (error) {
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        }
+    },
+
+    SignOut: function(objectName, callback, fallback){
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
+
+        try {
+            firebase.auth().signOut().then(function (unused) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, "Success: SignOut");
+            }).catch(function (error) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            });
+
+        } catch (error) {
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
         }
     },
 
@@ -105,6 +158,22 @@ mergeInto(LibraryManager.library, {
                 window.unityInstance.SendMessage(parsedObjectName, parsedOnUserSignedOut, "User signed out");
             }
         });
+    },
 
-    }
+    ReloadFirebaseUser: function(objectName, callback, fallback){
+        var parsedObjectName = UTF8ToString(objectName);
+        var parsedCallback = UTF8ToString(callback);
+        var parsedFallback = UTF8ToString(fallback);
+
+        try {
+            firebase.auth().currentUser.reload().then(function (user) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedCallback, JSON.stringify(firebase.auth().currentUser));
+            }).catch(function (error) {
+                window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+            });
+
+        } catch (error) {
+            window.unityInstance.SendMessage(parsedObjectName, parsedFallback, JSON.stringify(error, Object.getOwnPropertyNames(error)));
+        }
+    },
 });

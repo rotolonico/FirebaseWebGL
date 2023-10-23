@@ -39,7 +39,7 @@ namespace FirebaseWebGL.Examples.Auth
         public void DisplayUserInfo(string user)
         {
             var parsedUser = StringSerializationAPI.Deserialize(typeof(FirebaseUser), user) as FirebaseUser;
-            DisplayData($"Email: {parsedUser.email}, UserId: {parsedUser.uid}, EmailVerified: {parsedUser.isEmailVerified}");
+            DisplayData($"Email: {parsedUser.email}, UserId: {parsedUser.uid}, EmailVerified: {parsedUser.emailVerified}");
         }
 
         public void DisplayData(string data)
